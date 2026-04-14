@@ -22,7 +22,9 @@ body {
 }
 
 a {
+    color: #000;
     text-decoration: none;
+
 }
 
 img {
@@ -34,6 +36,11 @@ li {
     list-style: none;
 }
 
+h2 {
+    font-size: 3rem;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-weight: 200;
+}
 
 
 
@@ -48,7 +55,7 @@ footer {
 .header {
     display: flex;
     justify-content: start;
-    margin: 200px auto 30px;
+    margin: 50px auto 30px;
 
 }
 
@@ -81,21 +88,32 @@ footer {
 
 
 .pages-guide {
-    width: 80%;
-    height: 0;
-    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: auto;
     font-size: 1rem;
+    padding: 50px;
+    margin-bottom: 50px;
+    letter-spacing: 1rem;
 }
 
 /* フッター */
 footer {
     border-top: 1px solid var(--border);
     padding: 20px 0 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-footer small {
+small {
+    display: block;
+    padding: 30px 0;
+    margin: 30px 0;
     color: var(--muted);
+}
+
+.sns-list {
+    display: flex;
+    justify-content: start;
+    gap: 80px;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
 }

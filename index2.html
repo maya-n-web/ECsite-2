@@ -1,8 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+
+<!-- ■ 制作タスク一覧
+①共通パーツのページ構成とレイアウトを完成
+index のヘッダー・フッターを下層ページ(製品詳細以外)へコピー。
+
+②下層ページの完遂
+About / Company / 各製品ページ ボディ部分のページ構成とレイアウトを完成させる。
+index のヘッダー・フッターを全製品ページへコピー。
+
+③ナビゲーション実装
+ハンバーガーメニューの設置と動作確認。(学習中のためこの順番。本来①で作成)
+
+④コンタクト実装
+お問い合わせフォームの設置。
+
+⑤動線（リンク）の設置
+index 内の製品リンク、SNSリンク（Instagram/X等）の紐付け。
+
+⑥レスポンシブデザイン実装
+モバイルファーストの考え方を採用しデスクトップ用のレイアウト作成
+
+
+■ 条件最終チェック項目
+リンク正常性: 全てのリンクが正しく繋がりエラーが出ないか。
+パスの整合性: 画像やリンクの指定が相対パスになっており、本番環境で表示されるか。
+外部リンク設定: SNSリンクに target="_blank" と rel="noopener" が設定されているか。
+レスポンシブ: スマホやPCで見た際に崩れがなく、メニューが正常に開閉するか。
+JS動作確認: エラーがなく処理が意図通りか。 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniture Design | 南青山で家具やインテリアの企画 ・販売</title>
     <meta name="description" content="南青山の家具・インテリア企画販売会社です。デザインと機能美を追求した家具で、心地よいライフスタイルを提案。空間設計から家具選びまで、独自の視点でお応え。">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -16,7 +58,7 @@
         <header class="header">
             <h1 class="logo"><a href="index.html"><img src="img/logo.svg" alt=""></a></h1>
             <!-- <button type="button" aria-label="メニューを開く">Menu</button>
-     <nav aria-label="グローバルナビゲーション"> -->
+    <nav aria-label="グローバルナビゲーション"> -->
             <!-- <ul>
         <li><a href="index.html">PRODUCTS</a></li>
         <li><a href="about.html">ABOUT</a></li>
@@ -25,27 +67,27 @@
       </ul> -->
             <!-- </nav> -->
         </header>
-
         <main class="main">
-            <section aria-labelledby="products-heading">
-                <h2 id="products-heading">Products</h2>
+            <section caria-labelledby="products-heading">
+                <h2 class="products-heading">Products</h2>
+
                 <ul class="item-list">
-                    <li><a href="product1.html"><img src="img/item13.jpg" alt="プロダクト1" />
+                    <li><a href="product1.html"><img src="img/item1.jpg" alt="プロダクト1" />
                             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
                             <p class="item-des">&yen;99,999 +tax</p>
                         </a>
                     </li>
-                    <li><a href="product1.html"><img src="img/item14.jpg" alt="プロダクト2" />
+                    <li><a href="product2.html"><img src="img/item2.jpg" alt="プロダクト2" />
                             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
                             <p class="item-des">&yen;99,999 +tax</p>
                         </a>
                     </li>
-                    <li><a href="product1.html"><img src="img/item15.jpg" alt="プロダクト3" />
+                    <li><a href="product3.html"><img src="img/item3.jpg" alt="プロダクト3" />
                             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
                             <p class="item-des">&yen;99,999 +tax</p>
                         </a>
                     </li>
-                    <li><a href="product1.html"><img src="img/item16.jpg" alt="プロダクト4" />
+                    <li><a href="product4.html"><img src="img/item4.jpg" alt="プロダクト4" />
                             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
                             <p class="item-des">&yen;99,999 +tax</p>
                         </a>
@@ -54,8 +96,8 @@
             </section>
 
             <nav class="pages-guide" aria-label="ページネーション">
-                <p><a href="index.html">1</p>
-                <p>2</p>
+                <p>1</p>
+                <p><a href="index2.html">2</a></p>
             </nav>
         </main>
 
@@ -68,6 +110,7 @@
             </ul>
             <small>&copy; Furniture Design</small>
         </footer>
+    </div>
 </body>
 
 </html>

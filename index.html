@@ -2,14 +2,32 @@
 <html lang="ja">
 
 
-indexページリンク含め完成させる。特にヘッダーフッター→inde2にフッタ-コピー
-アバウト→company→各製品ページ完成させる
-ハンバーガーメニューの設置
-お問い合わせの設置
-NEXT----indexページ内の各商品/snsリンク設置
+■ 制作タスク一覧
+①共通パーツのページ構成とレイアウトを完成
+index のヘッダー・フッターを全ページ（下層ページ）へコピー。
+
+②下層ページの完遂
+About / Company / 各製品ページ ボディ部分のページ構成とレイアウトを完成させる。
+
+③ナビゲーション実装
+ハンバーガーメニューの設置と動作確認。(学習中のためこの順番。本来①で作成)
+
+④コンタクト実装
+お問い合わせフォームの設置。
+
+⑤動線（リンク）の設置
+index 内の製品リンク、SNSリンク（Instagram/X等）の紐付け。
+
+⑥レスポンシブデザイン実装
+モバイルファーストの考え方を採用しデスクトップ用のレイアウト作成
 
 
-
+■ 条件最終チェック項目
+リンク正常性: 全てのリンクが正しく繋がりエラーが出ないか。
+パスの整合性: 画像やリンクの指定が相対パスになっており、本番環境で表示されるか。
+外部リンク設定: SNSリンクに target="_blank" と rel="noopener" が設定されているか。
+レスポンシブ: スマホやPCで見た際に崩れがなく、メニューが正常に開閉するか。
+JS動作確認: エラーがなく処理が意図通りか。
 
 
 
@@ -52,66 +70,81 @@ NEXT----indexページ内の各商品/snsリンク設置
       <h2 id="products-heading">Products</h2>
 
       <ul class="item-list">
-        <li><a href="index2.html"><img src="img/item1.jpg" alt="プロダクト1" />
+        <li><a href="product1.html"><img src="img/item1.jpg" alt="プロダクト1" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item2.jpg" alt="プロダクト2" />
+          </a>
+        </li>
+        <li><a href="product2.html"><img src="img/item2.jpg" alt="プロダクト2" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item3.jpg" alt="プロダクト3" />
+          </a>
+        </li>
+        <li><a href="product3.html"><img src="img/item3.jpg" alt="プロダクト3" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item4.jpg" alt="プロダクト4" />
+          </a>
+        </li>
+        <li><a href="product4.html"><img src="img/item4.jpg" alt="プロダクト4" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item5.jpg" alt="プロダクト5" />
+          </a>
+        </li>
+        <li><a href="product5.html"><img src="img/item5.jpg" alt="プロダクト5" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item6.jpg" alt="プロダクト6" />
+          </a>
+        </li>
+        <li><a href="product6.html"><img src="img/item6.jpg" alt="プロダクト6" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item7.jpg" alt="プロダクト7" />
+          </a>
+        </li>
+        <li><a href="product7.html"><img src="img/item7.jpg" alt="プロダクト7" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item8.jpg" alt="プロダクト8" />
+          </a>
+        </li>
+        <li><a href="product8.html"><img src="img/item8.jpg" alt="プロダクト8" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item9.jpg" alt="プロダクト9" />
+          </a>
+        </li>
+        <li><a href="product9.html"><img src="img/item9.jpg" alt="プロダクト9" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item10.jpg" alt="プロダクト10" />
+          </a>
+        </li>
+        <li><a href="product10.html"><img src="img/item10.jpg" alt="プロダクト10" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item11.jpg" alt="プロダクト11" />
+          </a>
+        </li>
+        <li><a href="product11.html"><img src="img/item11.jpg" alt="プロダクト11" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
-        <li><a href="index2.html"><img src="img/item12.jpg" alt="プロダクト12" />
+          </a>
+        </li>
+        <li><a href="product12.html"><img src="img/item12.jpg" alt="プロダクト12" />
             <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
             <p class="item-des">&yen;99,999 +tax</p>
-          </a></li>
+          </a>
+        </li>
       </ul>
-
     </section>
-    <nav class="pages-guide" aria-label="ページネーション"> <a href="index.html" aria-current="page">1</a>
-      <a href="products-page2.html">2</a>
+
+    <nav class="pages-guide" aria-label="ページネーション">
+      <p>1</p>
+      <p><a href="index2.html">2</a></p>
     </nav>
   </main>
+
+
   <footer>
     <ul class="sns-list">
-      <li><a href="#">INSTAGRAM</a></li>
-      <li><a href="#">TWITTER</a></li>
-      <li><a href="#">FACEBOOK</a></li>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+      <li><a href="https://x.com/" target="_blank" rel="noopener">TWITTER</a></li>
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">FACEBOOK</a></li>
     </ul>
     <small>&copy; Furniture Design</small>
   </footer>

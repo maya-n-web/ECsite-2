@@ -88,7 +88,8 @@ footer {
 
 
 .pages-guide {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: auto;
     font-size: 1rem;

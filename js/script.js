@@ -41,3 +41,18 @@ menu.addEventListener('click', () => {
     menu.style.color = '#fff';
   }
 });
+
+
+// view more ボタン
+const btn = document.querySelector('#view-more');
+const hiddenItems = document.querySelector('.is-hidden');
+
+btn.addEventListener('click', () => {
+  // 隠れているアイテムすべてに対して処理を行う
+  hiddenItems.forEach((item) => {
+    item.classList.remove('is-hidden'); // クラスを外すと表示される
+  });
+  
+  // ボタン自体を消す（任意）
+  btn.style.display = 'none';
+});

@@ -23,15 +23,18 @@ body {
     line-height: 1.7;
     box-sizing: border-box;
     font-weight: 300;
+    margin: 0;
+    padding-top: 50px;
 }
 
-#wrapper {
+.wrapper {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     min-height: 100vh;
     overflow-x: hidden;
+    padding: 40px;
 }
 
 a {
@@ -45,6 +48,7 @@ img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 li {
@@ -65,18 +69,28 @@ h2 {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 10px;
+    background-color: var(--bg);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 30px 40px;
+    margin-bottom: 20px;
 
 
 }
 
-.logo {
-    width: 50%;
+.header img {
+    width: 180px;
+    height: 21px;
 }
 
 header #menu {
     cursor: pointer;
     z-index: 999;
+    height: 21px;
 }
 
 nav {
@@ -121,7 +135,7 @@ nav ul li>a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: auto;
-    gap: 30px;
+    gap: 50px 20px;
     margin: 10px auto;
 }
 
@@ -130,8 +144,8 @@ nav ul li>a {
     font-size: 1.6rem;
 }
 
-
-.pages-guide {
+.pages-guide1,
+.pages-guide2 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -141,10 +155,27 @@ nav ul li>a {
     letter-spacing: 15px;
 }
 
-.pages-guide p {
+.pages-guide1 p,
+.pages-guide2 p {
     margin-right: 5px;
 }
 
+
+.view-more {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    height: auto;
+    font-size: 1.6rem;
+    margin: 40px auto;
+}
+
+.is-hidden~li,
+.pages-guide1 {
+    /*9個目からのアイテムをいったん隠している*/
+    display: none;
+}
 
 
 
@@ -153,6 +184,7 @@ nav ul li>a {
 footer {
     padding: 20px 0 0;
     margin: 0 auto;
+    padding: 40px;
 
 }
 
@@ -181,17 +213,20 @@ small {
 
 /* about*/
 
-.about_main {
+.about_main,
+.company_main {
+    max-width: 600px;
     min-height: 600px;
     margin: 0 auto;
+    padding: 40px;
 
 }
 
-.about-heading {
-    margin: 30px 0;
+.about_heading {
+    margin: 50px 0;
 }
 
-.about-heading~p {
+.about_heading~p {
     font-size: 1.4rem;
     line-height: 2;
     margin-bottom: 30px;
@@ -224,10 +259,11 @@ small {
 
 
 
-iframe {
+.map iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
+    filter: grayscale(100%);
 }
 
 
@@ -235,8 +271,8 @@ iframe {
 
 
 /* 商品詳細 */
-article {
-    max-width: 900px;
+.product_main {
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -277,4 +313,114 @@ figure {
     padding: 20px;
     margin: 20px;
     text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* デスクトップ */
+@media(min-width:900px) {
+
+    /* メイン */
+    .item-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* フッター */
+
+
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+    }
+
+
+
+    /* about*/
+    .about_main,
+    .company_main {
+        text-align: left;
+        margin: 0 0 0 40px;
+    }
+
+    .about_heading~p {
+        margin-bottom: 10px;
+
+    }
+
+
+    /* company */
+
+    .company_heading {
+        margin-bottom: 60px;
+    }
+
+    .company_info dt,
+    .company_info dd {
+        font-size: 1.4rem;
+    }
+
+    .company_info dt {
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .company_info dd {
+        border-bottom: 2px solid var(--border);
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+        line-height: 1.5;
+    }
+
+
+
+    .map iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        filter: grayscale(100%);
+    }
 }

@@ -1,27 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-
-<!-- ■ 制作タスク
-
-1. 各ページhtmlを作成。ヘッドの中身調整忘れずに。
-2. 各ページのbodyレイアウト作成。
-3. headerのレイアウトを作成。-------------ナビゲーション実装（ハンバーガーメニューの作成・お問い合わせフォームの設置。）
-4. footerのレイアウト作成　-------------copyrightの設置。
-5. 作成したheader/footer を下層ページへコピー。その際、変更によって生じたヘッドもコピーして変更する。
-6. 2個目以降の、製品詳細ページを複製および画像リンクの変更。
-7. サイト内すべての動線（リンク）の設置 (index 内の製品リンク、SNSリンク（Instagram/X等）の紐付け。)
-8. レスポンシブデザイン実装(モバイルファーストの考え方を採用しデスクトップ用のレイアウト作成)
-
-■ 条件最終チェック項目
-リンク正常性: 全てのリンクが正しく繋がりエラーが出ないか。
-パスの整合性: 画像やリンクの指定が相対パスになっており、本番環境で表示されるか。
-外部リンク設定: SNSリンクに target="_blank" と rel="noopener" が設定されているか。
-レスポンシブ: スマホやPCで見た際に崩れがなく、メニューが正常に開閉するか。
-JS動作確認: エラーがなく処理が意図通りか。 -->
-
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,9 +15,9 @@ JS動作確認: エラーがなく処理が意図通りか。 -->
 
 
 <body>
-  <div id="wrapper">
-    <header class="header">
-      <h1 class="logo">
+  <div class="wrapper">
+    <header class="header" id="header">
+      <h1>
         <a href="index.html"><img src="img/logo.svg" alt="会社ロゴ" width="108" height="21"></a>
       </h1>
       <span id="menu" class="material-symbols-outlined">menu</span>
@@ -48,14 +27,14 @@ JS動作確認: エラーがなく処理が意図通りか。 -->
           <li><a href="index.html">PRODUCTS</a></li>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="company.html">COMPANY</a></li>
-          <li><a href="mailto:info@example.com">CONTACT</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@test.com" target="_blank">CONTACT</a></li>
         </ul>
       </nav>
     </header>
 
 
 
-    <main class="main">
+    <main>
       <section caria-labelledby="products-heading">
         <h2 class="products-heading">Products</h2>
 
@@ -95,7 +74,7 @@ JS動作確認: エラーがなく処理が意図通りか。 -->
               <p class="item-des">&yen;99,999 +tax</p>
             </a>
           </li>
-          <li><a href="product8.html"><img src="img/item8.jpg" alt="プロダクト8" />
+          <li class="is-hidden"><a href="product8.html"><img src="img/item8.jpg" alt="プロダクト8" />
               <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
               <p class="item-des">&yen;99,999 +tax</p>
             </a>
@@ -121,9 +100,10 @@ JS動作確認: エラーがなく処理が意図通りか。 -->
             </a>
           </li>
         </ul>
+        <a id="view-more" class="view-more" href="#header">View More</a>
       </section>
 
-      <div class="pages-guide" aria-label="ページネーション">
+      <div class="pages-guide1" aria-label="ページネーション">
         <p>1</p>
         <p><a href="index2.html">2</a></p>
       </div>
@@ -139,8 +119,10 @@ JS動作確認: エラーがなく処理が意図通りか。 -->
       <small>&copy; Furniture Design</small>
     </footer>
   </div>
-  <script src="js/script.js" defer></script>
 
+  <script src="js/script.js" defer></script>
 </body>
+
+
 
 </html>

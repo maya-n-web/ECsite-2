@@ -15,7 +15,7 @@
 
 
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
         <header class="header">
             <h1 class="logo">
                 <a href="index.html"><img src="img/logo.svg" alt="会社ロゴ" width="108" height="21"></a>
@@ -35,33 +35,36 @@
 
 
         <main class="product_main">
-            <article>
-                <h2 class="product_heading">プロダクトタイトル</h2>
+            <h2 class="product_heading">プロダクトタイトル</h2>
+            <div class="product_heading_frame">
+                <article>
+                    <figure class="product_heading_img">
+                        <img src="img/item3.jpg" alt="プロダクトタイトル画像" />
+                    </figure>
+                </article>
 
-                <figure>
-                    <img src="img/item3.jpg" alt="プロダクトタイトル画像" />
-                </figure>
+                <div class="product_heading_contents">
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
 
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                    <p class="product_price">&yen;99,999 +tax</p>
 
-                <p class="product_price">&yen;99,999 +tax</p>
+                    <dl class="product_table">
+                        <dt>SIZE：</dt>
+                        <dd>W999 × D999 × H999</dd>
+                        <dt>COLOR：</dt>
+                        <dd>テキスト</dd>
+                        <dt>MATERIAL：</dt>
+                        <dd>テキストテキストテキスト</dd>
+                    </dl>
 
-                <dl>
-                    <dt>SIZE：</dt>
-                    <dd>W999 × D999 × H999</dd>
-                    <dt>COLOR：</dt>
-                    <dd>テキスト</dd>
-                    <dt>MATERIAL：</dt>
-                    <dd>テキストテキストテキスト</dd>
-                </dl>
-
-                <p class="back_link">
-                    <a href="index.html">Back To Products</a>
-                </p>
-            </article>
+                    <p class="back_link">
+                        <a href="index.html">Back To Products</a>
+                    </p>
+                </div>
+            </div>
         </main>
 
         <footer>

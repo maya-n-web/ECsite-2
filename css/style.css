@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
-
-/* 共通*/
-/* cssでの変数定義 */
-
+/* =========================================
+   1. 共通設定（変数・リセット・ベース）
+   ========================================= */
 html {
     font-size: 62.5%;
 }
@@ -19,7 +18,6 @@ body {
     color: var(--text);
     background: var(--bg);
     font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
-    /* 游ゴシックは、日本語と英数字が近いバランスでデザインされているため、混在しても違和感がほとんど出ない。 */
     line-height: 1.7;
     box-sizing: border-box;
     font-weight: 300;
@@ -41,7 +39,6 @@ a {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-
 }
 
 img {
@@ -55,17 +52,15 @@ li {
     list-style: none;
 }
 
-
 h2 {
     font-weight: 200;
     margin: 0;
     font-size: 1.4rem;
 }
 
-
-
-/* ヘッダー */
-
+/* =========================================
+   2. ヘッダー・ナビゲーション
+   ========================================= */
 .header {
     display: flex;
     justify-content: space-between;
@@ -79,8 +74,6 @@ h2 {
     padding: 30px 40px;
     margin-bottom: 20px;
     z-index: 99999999999;
-
-
 }
 
 .header img {
@@ -106,7 +99,6 @@ nav {
 
 nav.active {
     top: 0;
-
 }
 
 nav ul {
@@ -127,12 +119,10 @@ nav ul li>a {
     color: #ffffff;
 }
 
-
-
-
-/* メイン */
-
-.item-list {
+/* =========================================
+   3. メイン（商品一覧・ガイド）
+   ========================================= */
+.item_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: auto;
@@ -140,29 +130,32 @@ nav ul li>a {
     margin: 10px auto;
 }
 
-.item-des {
+.item_list img {
+    margin-bottom: 20px;
+}
+
+.item_des {
     line-height: 1.5;
     font-size: 1.6rem;
 }
 
-.pages-guide1,
-.pages-guide2 {
+.pages_guide2,
+.pages_guide1 {
     display: flex;
     justify-content: center;
     width: 100%;
     height: auto;
     font-size: 1.6rem;
     padding: 50px;
-    letter-spacing: 15px;
 }
 
-.pages-guide1 p,
-.pages-guide2 p {
-    margin-right: 5px;
+.pages_guide1 p,
+.pages_guide2 p {
+    text-align: center;
+    width: 100%;
 }
 
-
-.view-more {
+.view_more {
     display: block;
     width: 100%;
     text-align: center;
@@ -172,16 +165,14 @@ nav ul li>a {
     margin: 40px auto;
 }
 
-.is-hidden~li,
-.pages-guide1 {
-    /*9個目からのアイテムをいったん隠している*/
+.is_hidden~li,
+.is_hidden {
     display: none;
 }
 
-
-
-
-/* フッター */
+/* =========================================
+   4. フッター
+   ========================================= */
 footer {
     margin: 0 auto;
     padding: 40px 0;
@@ -198,7 +189,7 @@ small {
     color: var(--muted);
 }
 
-.sns-list {
+.sns_list {
     width: auto;
     display: flex;
     justify-content: start;
@@ -207,17 +198,14 @@ small {
     letter-spacing: 2px;
 }
 
-
-
-
-/* about*/
-
+/* =========================================
+   5. アバウト・会社概要
+   ========================================= */
 .about_main,
 .company_main {
     width: 100%;
     max-width: 600px;
     min-height: 600px;
-
 }
 
 .about_heading {
@@ -228,11 +216,7 @@ small {
     font-size: 1.4rem;
     line-height: 2;
     margin-bottom: 30px;
-
 }
-
-
-/* company */
 
 .company_heading {
     margin-bottom: 60px;
@@ -255,8 +239,6 @@ small {
     line-height: 1.5;
 }
 
-
-
 .map iframe {
     width: 100%;
     height: auto;
@@ -264,14 +246,13 @@ small {
     z-index: 1;
 }
 
-
-
-
-
-/* 商品詳細 */
+/* =========================================
+   6. 商品詳細
+   ========================================= */
 .product_main {
     max-width: 800px;
     margin: 0 auto;
+    font-size: 1.4rem;
 }
 
 figure {
@@ -294,7 +275,6 @@ figure {
 .product_heading~dl {
     display: grid;
     grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
     margin: 26px 0;
     max-width: 760px;
     font-size: 1.4rem;
@@ -302,7 +282,7 @@ figure {
 }
 
 .product_heading~dt,
-.product_heading~dh {
+.product_heading~dd {
     font-weight: 300;
 }
 
@@ -311,62 +291,25 @@ figure {
     padding: 20px;
     margin: 20px;
     text-decoration: none;
+    display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* デスクトップ */
+/* =========================================
+   7. デスクトップ表示（レスポンシブ）
+   ========================================= */
 @media(min-width:900px) {
 
-    /* メイン */
-    .item-list {
+    /* メイン（グリッド調整） */
+    .item_list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    /* フッター */
+    .pages_guide1 p,
+    .pages_guide2 p {
+        width: 20%;
+    }
 
-
+    /* フッター（レイアウト変更） */
     footer {
         width: 100%;
         display: flex;
@@ -374,33 +317,26 @@ figure {
         align-items: center;
     }
 
-
-
-    /* about*/
+    /* アバウト（左寄せ） */
     .about_main,
     .company_main {
         text-align: left;
-        margin: 0px;
+        margin: 0;
     }
 
     .about_heading~p {
         margin-bottom: 10px;
-
     }
 
-
-    /* company */
-
+    /* 会社概要（テーブル形式） */
     .company_info {
         display: flex;
         margin-bottom: 20px;
         flex-wrap: wrap;
-        /* これで100％から出る要素を改行させる */
     }
 
     .company_info dt {
         width: 30%;
-        /* flex-wrapの中のパーセンテージを決めている; */
         border-bottom: solid 1px #dcdbdb;
         padding: 20px 10px;
         margin: 0;
@@ -422,70 +358,53 @@ figure {
     }
 
     .map iframe {
-        width: 100%;
         height: 300px;
-        aspect-ratio: 1 / 1;
         filter: grayscale(100%);
     }
-}
 
+    /* 商品詳細（横並びレイアウト） */
+    .product_heading_frame {
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px;
+    }
 
+    .product_heading_img {
+        max-width: 400px;
+        max-height: 400px;
+    }
 
-/* 商品詳細 */
-/* 
-.product_heading_contents {
-    display: flex;
+    .product_main {
+        margin: 0;
+    }
 
-} */
+    .product_heading_contents {
+        width: 336px;
+        height: auto;
+    }
 
-.product_heading_frame {
-    display: flex;
-    justify-content: flex-start;
-    gap: 50px;
-}
+    .product_price {
+        margin: 20px 0;
+    }
 
-.product_heading_img {
-    max-width: 400px;
-    max-height: 400px;
+    .product_table {
+        margin: 20% 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-}
+    .product_table dt {
+        width: 30%;
+        margin: 0;
+    }
 
-.product_main {
-    margin: 0;
-    font-size: 1.4rem;
+    .product_table dd {
+        width: 60%;
+        margin: 0;
+    }
 
-}
-
-.product_heading_contents {
-    width: 336px;
-    height: auto;
-}
-
-.product_price {
-    margin: 20px 0 20px 0;
-}
-
-.product_table {
-    margin: 20% 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    /* これで100％から出る要素を改行させる */
-}
-
-.product_table dt {
-    width: 30%;
-    /* flex-wrapの中のパーセンテージを決めている; */
-    margin: 0;
-}
-
-.product_table dd {
-    width: 60%;
-    margin: 0;
-}
-
-.back_link {
-    width: 100%;
-
-    margin: 100px auto;
-
+    .back_link {
+        width: 100%;
+        margin: 100px auto;
+    }
 }
